@@ -1,0 +1,56 @@
+### Register
+POST https://block-wp.indianexpress.com/wp-json/headlesswoo/v1/register
+Content-Type: application/json
+
+{
+  "username": "aman",
+  "password": "securepassword",
+  "email": "user@example.com"
+}
+
+### Login
+POST https://block-wp.indianexpress.com/wp-json/headlesswoo/v1/login
+Content-Type: application/json
+
+{
+  "username": "newuser",
+  "password": "securepassword"
+}
+
+### Get Products
+GET https://block-wp.indianexpress.com/wp-json/headlesswoo/v1/products
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5ld3VzZXIiLCJleHAiOjE3MzcxMTg3ODh9.Rg0jSJWrT9nFZxpu_K20OXsPH2TiW-38rfNPsV45JWM
+
+### Get Product
+GET https://block-wp.indianexpress.com/wp-json/headlesswoo/v1/products?P=123
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5ld3VzZXIiLCJleHAiOjE3MzcxMTg3ODh9.Rg0jSJWrT9nFZxpu_K20OXsPH2TiW-38rfNPsV45JWM
+
+### Get Cart
+GET https://block-wp.indianexpress.com/wp-json/headlesswoo/v1/cart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5ld3VzZXIiLCJleHAiOjE3MzcxMTg3ODh9.Rg0jSJWrT9nFZxpu_K20OXsPH2TiW-38rfNPsV45JWM
+
+### Add to Cart
+POST https://block-wp.indianexpress.com/wp-json/headlesswoo/v1/cart/add
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5ld3VzZXIiLCJleHAiOjE3MzcxMTg3ODh9.Rg0jSJWrT9nFZxpu_K20OXsPH2TiW-38rfNPsV45JWM
+Content-Type: application/json
+
+{
+  "product_id": 136,
+  "quantity": 1
+}
+
+### Create Order
+POST https://block-wp.indianexpress.com/wp-json/headlesswoo/v1/order/create
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjozLCJ1c2VybmFtZSI6Im5ld3VzZXIiLCJleHAiOjE3MzcxMTg3ODh9.Rg0jSJWrT9nFZxpu_K20OXsPH2TiW-38rfNPsV45JWM
+Content-Type: application/json
+
+{
+  "payment_method": "bacs",
+  "payment_method_title": "Direct Bank Transfer",
+  "line_items": [
+    {
+      "product_id": 123,
+      "quantity": 1
+    }
+  ]
+}

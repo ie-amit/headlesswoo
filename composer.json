@@ -1,0 +1,15 @@
+{
+  "name": "amitbatham/headlesswoo",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "Amit Batham",
+      "email": "ketan8899.41@gmail.com"
+    }
+  ],
+  "require": {
+    "guzzlehttp/guzzle": "^7.9"
+  }
+}
